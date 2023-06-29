@@ -2,7 +2,7 @@ import 'package:diseno/item_details_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         ),
       ),
-      home: ItemsDetailScreen(),
+      home: const ItemsDetailScreen(),
     );
   }
 }

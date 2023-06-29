@@ -1,3 +1,4 @@
+import 'package:diseno/payment_screen.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatefulWidget {
@@ -30,7 +31,7 @@ class _CartScreenState extends State<CartScreen> {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(30),
-          child: Column(
+          child: Column ( 
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
@@ -146,7 +147,7 @@ class _CartScreenState extends State<CartScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 180),
+              SizedBox(height: 100),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -167,6 +168,77 @@ class _CartScreenState extends State<CartScreen> {
                     ),
                   ),
                 ],
+              ),
+              SizedBox(height: 10),
+               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Shipping fee",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.grey,
+                  ),
+                 ),
+                 Text("\$15.00",
+                  style: TextStyle(
+                    fontSize: 15,fontWeight: FontWeight.w400,
+                  ),
+                 ),
+                ],
+              ),
+              SizedBox(height: 10),
+              Container(width: size.width, height: 1, color: Colors.grey,),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Shipping Pyment",
+                  style: TextStyle(
+                    fontSize: 15,fontWeight: FontWeight.w400,
+                  ),
+                 ),
+                 Text("\$295.00",
+                  style: TextStyle(
+                    fontSize: 15,fontWeight: FontWeight.w700,
+                    color: Colors.redAccent,
+                  ),
+                 ),
+                ],
+              ),
+              SizedBox(height: 50),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => paymentConfirmScreen()));
+                },
+                child: Container(
+                  height: 45,
+                  width: size.width,
+                  decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child:Text(
+                      "Check out",
+                      style: TextStyle(color: Colors.white, 
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15,),
+                    ), 
+                    ),
+                ),
+              ),
+              SizedBox(height: 5),
+              Center(
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Continue Shopping",
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black54,
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
